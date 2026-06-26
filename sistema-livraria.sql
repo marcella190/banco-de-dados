@@ -33,3 +33,8 @@ INSERT INTO Compras (ClienteID, NomeLivro) VALUES
 
 SELECT * FROM Clientes; 
 SELECT * FROM Compras; 
+
+-- Listar todas as compras com nome do cliente
+SELECT c.nomeCliente, co.NomeLivro
+FROM Compras co
+JOIN Clientes c ON co.ClienteID = c.ID;
